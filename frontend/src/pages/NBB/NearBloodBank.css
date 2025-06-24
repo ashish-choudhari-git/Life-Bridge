@@ -1,0 +1,219 @@
+.nnb-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top:55px;
+  font-family: Arial, sans-serif;
+}
+
+.nnb-heading {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.find-form {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.nnb-select {
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-width: 250px;
+}
+
+.nnb-select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.nnb-Find-btn {
+  padding: 0.75rem 3.5rem;
+  background-color: #13bceb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+.nnb-Find-btn:hover:not(:disabled) {
+  background-color: white;
+  border: 2px solid #13bceb;
+  color:black;
+}
+
+.nnb-Find-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.nbb-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: center;
+  border: 1px solid #f5c6cb;
+}
+
+.nnb-results-wrapper {
+  margin-top: 2rem;
+}
+
+.nnb-available-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.nnb-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.9rem;
+}
+
+.nnb-result-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.nnb-result-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nnb-result-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.nnb-result-card .nnb-address {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.nnb-result-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.25rem;
+}
+
+.nnb-availability-info {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.nnb-result-card.nnb-available-card .nnb-availability-info {
+  background-color: #e8f5e9; 
+  border: 1px solid #c8e6c9;
+}
+
+.nnb-availability-info span {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2e7d32; 
+}
+
+.nnb-availability-info .nnb-units {
+  font-size: 0.9rem;
+  color: #388e3c;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.nnb-result-card.nnb-unavailable-card {
+  background-color: #fafafa;
+}
+
+.nnb-result-card.nnb-unavailable-card .nnb-availability-info {
+  background-color: #ffebee; 
+  border: 1px solid #ffcdd2;
+}
+
+.nnb-result-card.nnb-unavailable-card .nnb-availability-info span {
+  color: #c62828; 
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.nnb-timestamp {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .find-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .nnb-select {
+    min-width: auto;
+  }
+  
+  .nnb-results-grid {
+    grid-template-columns: 1fr;
+  }
+  .nnb-heading {
+  font-size: 2rem;
+}
+}
+
+
+/* Hiding details in mobile unless card is open */
+.nnb-result-card .nnb-details {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nnb-result-card .nnb-details {
+    display: none;
+  }
+  .nnb-main{
+    padding-top: 35px;
+  }
+  .nnb-heading{
+    margin-bottom: 25px;
+  }
+  .nnb-result-card h4{
+    font-size:16px;
+    margin-bottom: 0;
+  }
+
+  .nnb-results-grid{
+    gap:1.2rem;
+  }
+
+
+  .nnb-result-card.open .nnb-details {
+    display: block;
+  }
+}

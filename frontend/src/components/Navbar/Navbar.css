@@ -1,0 +1,144 @@
+.nav {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #b3e1ee;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.nav-logo {
+    height: 4rem;
+    width: 7rem;
+}
+
+.nav-logo img {
+    height: 4rem;
+    width: 7rem;
+}
+
+.Link{
+    text-decoration: none;
+    color:#184349;
+}
+
+.nav-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    gap: 40px;
+}
+
+/* Hamburger Button */
+.menu-button {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu-button span {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .nav {
+        width: 100%;
+        padding: 12px 20px;
+        left: 0;
+        right: 0;
+        box-sizing: border-box;
+    }
+
+    .nav-logo {
+        height: 3rem;
+        width: 5rem;
+    }
+
+    .nav-logo img {
+        height: 3rem;
+        width: 5rem;
+    }
+
+    .menu-button {
+        display: flex;
+    }
+
+    .nav-icons {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+    }
+
+    .nav-icons.show {
+        display: flex;
+        animation: slideDown 0.3s ease;
+    }
+
+    .nav-icons p {
+        width: 90%;
+        text-align: center;
+        padding: 15px;
+        border-radius: 15px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+        transition: all 0.3s ease;
+        background: #f8f9fa;
+        margin: 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        box-sizing: border-box;
+    }
+
+    .nav-icons p:active {
+        transform: scale(0.98);
+    }
+
+    .nav-icons p:hover {
+        background: #b3e1ee;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(179, 225, 238, 0.3);
+    }
+}
+
+/* Animation for dropdown menu */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
