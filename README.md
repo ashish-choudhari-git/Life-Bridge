@@ -15,12 +15,12 @@ When someone needs blood urgently, it's very difficult to:
 
 LifeBridge solves these problems by providing:
 
-- ** Live Blood Availability**: Real-time updates showing which blood types are available/unavailable at each blood bank
-- ** Nearest Blood Bank Finder**: Find the closest blood banks to your location with distance and contact details
-- ** Blood Donation Form**: Easy form to register as a donor that gets sent directly to blood banks
-- ** Daily Updated Data**: Blood banks update their inventory daily so you always see current information
-- ** Blood Bank Search**: Search blood banks by location, blood type, and availability
-- ** Blood Donation Info**: Complete guide about blood donation process, eligibility, and compatibility
+- **Live Blood Availability**: Real-time updates showing which blood types are available/unavailable at each blood bank
+- **Nearest Blood Bank Finder**: Find the closest blood banks to your location with distance and contact details
+- **Blood Donation Form**: Easy form to register as a donor that gets sent directly to blood banks
+- **Daily Updated Data**: Blood banks update their inventory daily so you always see current information
+- **Blood Bank Search**: Search blood banks by location, blood type, and availability
+- **Blood Donation Info**: Complete guide about blood donation process, eligibility, and compatibility
 
 ## 🛠️ Technologies Used
 
